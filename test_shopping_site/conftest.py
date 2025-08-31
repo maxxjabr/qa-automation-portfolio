@@ -1,16 +1,11 @@
 import pytest
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
+from playwright.sync_api import sync_playwright
 
-import sys
-import os
-
-# Add the root of the project to the system path
-sys.path.insert(0, os.path.abspath(os.path.dirname(__file__)))
-
-@pytest.fixture
-def driver():
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-    yield driver
-    driver.quit()
+@pytest.fixture(scope="function")
+def page():
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        context = browser.new_context()
+        page = context.new_page()
+        yield page
+        browser.close()
