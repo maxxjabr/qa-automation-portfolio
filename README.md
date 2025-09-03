@@ -30,7 +30,7 @@ This repository showcases a 4-week QA automation portfolio project using modern 
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/qa-automation-portfolio.git
+git clone https://github.com/maxxjabr/qa-automation-portfolio.git
 cd qa-automation-portfolio
 ```
 
@@ -62,7 +62,7 @@ Set ```headless=False``` in ```conftest.py``` if you want to see the browser dur
 ## Week-by-Week Details
 
 ### Week 1: Quotes to Scrape
-Automated basic UI tests on https://quotestoscrape.com using Selenium + Pytest.
+Automated basic UI tests on https://quotes.toscrape.com using Selenium + Pytest.
 #### Tests Included:
 - Title presence
 - Login visibility
