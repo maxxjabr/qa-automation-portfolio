@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .env
 .pytest_cache
+report.html
+test_shopping_site/screenshots/*
+test_shopping_site/screenshots/.gitkeep

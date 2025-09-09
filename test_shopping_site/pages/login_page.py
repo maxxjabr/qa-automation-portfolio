@@ -9,3 +9,6 @@ class LoginPage:
         self.page.fill('input[data-test="username"]', username)
         self.page.fill('input[data-test="password"]', password)
         self.page.click('input[data-test="login-button"]')
+    
+    def get_error_message(self):
+        return self.page.text_content('h3[data-test="error"]')

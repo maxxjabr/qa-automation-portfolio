@@ -1,0 +1,24 @@
+import pytest
+from test_shopping_site.pages.login_page import LoginPage
+from test_shopping_site.pages.inventory_page import InventoryPage
+from test_shopping_site.pages.cart_page import CartPage
+
+def test_add_and_remove_from_cart(page):
+    login = LoginPage(page)
+    inventory = InventoryPage(page)
+    cart = CartPage(page)
+
+    login.goto()
+    login.login("standard_user", "secret_sauce")
+
+    inventory.add_first_item_to_cart()
+    inventory.open_cart()
+
+    assert len(cart.get_cart_items()) >= 1
+
+    # Go back and remove the item
+    page.go_back()
+    inventory.remove_first_item_from_cart()
+    inventory.open_cart()
+
+    assert len(cart.get_cart_items()) == 0

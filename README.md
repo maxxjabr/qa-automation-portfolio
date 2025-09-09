@@ -75,6 +75,13 @@ Automated login and inventory page validations on https://saucedemo.com using Pl
 - Product visibility
 - Inventory page assertions
 
+### Week 3: Reporting & GitHub Polish
+- Integrated `pytest-html` for automatic HTML reports
+- Configured `conftest.py` to capture screenshots on test failures
+- Added one flaky test to demonstrate failure reporting
+- (Optional) Configured Playwright screenshots on failure
+- Added `pytest.ini` and cleaned up repo structure
+
 ## Contact
 Created by [Mahmoud Jabir](https://github.com/maxxjabr)
 Connect with me on [LinkedIn](https://www.linkedin.com/in/max-jabir/)
