@@ -10,7 +10,7 @@ This repository showcases a 4-week QA automation portfolio project using modern 
 |------|-------|------|
 | Week 1 | Test automation on static site | Selenium + Pytest |
 | Week 2 | Page Object Model, login + inventory tests | Playwright + Pytest |
-| Week 3 | Cart flow, user roles, error handling | Playwright |
+| Week 3 | Cart flow, user roles, error handling | Playwright + Pytest |
 | Week 4 | Data-driven tests, test reports, GitHub Actions | TBD |
 
 ---
