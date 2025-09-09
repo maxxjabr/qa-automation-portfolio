@@ -17,7 +17,6 @@ def pytest_runtest_makereport(item, call):
     outcome = yield
     rep = outcome.get_result()
     if rep.when == "call" and rep.failed:
-        print(f"[DEBUG] funcargs: {item.funcargs}")
         page = item.funcargs.get("page", None)
         if page:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -25,6 +24,3 @@ def pytest_runtest_makereport(item, call):
             os.makedirs(ss_dir, exist_ok=True)
             screenshot_name = os.path.join(ss_dir, f"{item.name}_{timestamp}.png")
             page.screenshot(path=screenshot_name)
-            print(f"Saving screenshot to {screenshot_name}")
-        else:
-            print("jk lmao fu")
