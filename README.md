@@ -1,6 +1,6 @@
 # QA Automation Portfolio
 
-This repository showcases a 4-week QA automation portfolio project using modern Python testing frameworks. The goal is to demonstrate competency with **test planning**, **test structure**, **Selenium**, **Playwright**, and the **Page Object Model**, while simulating a real-world QA workflow.
+This repository showcases a 4-week QA automation portfolio project using modern Python testing frameworks. The goal is to demonstrate competency with **test planning**, **test structure**, **Selenium**, **Playwright**, and the **Page Object Model (POM)** while simulating a real-world QA workflow.
 
 ---
 
@@ -11,7 +11,7 @@ This repository showcases a 4-week QA automation portfolio project using modern 
 | Week 1 | Test automation on static site | Selenium + Pytest |
 | Week 2 | Page Object Model, login + inventory tests | Playwright + Pytest |
 | Week 3 | Cart flow, user roles, error handling | Playwright + Pytest |
-| Week 4 | Data-driven tests, test reports, GitHub Actions | TBD |
+Week 4 | Realistic final project with dynamic content | Playwright + Pytest |
 
 ---
 
@@ -53,11 +53,16 @@ playwright install              # For Playwright tests
 pytest test_quotes_site/
 ```
 
-### Week 2: Shopping Site (Playwright)
+### Weeks 2 & 3: Shopping Site (Playwright)
 ```bash
 pytest test_shopping_site/
 ```
 Set ```headless=False``` in ```conftest.py``` if you want to see the browser during testing.
+
+### Week 4: Final Project (Playwright)
+```bash
+pytest test_final_project/
+```
 
 ## Week-by-Week Details
 
@@ -69,7 +74,7 @@ Automated basic UI tests on https://quotes.toscrape.com using Selenium + Pytest.
 - Pagination functionality
 
 ### Week 2: Shopping Site (SauceDemo)
-Automated login and inventory page validations on https://saucedemo.com using Playwright + Pytest + Page Object Model.
+Automated login and inventory page validations on https://saucedemo.com using Playwright + Pytest + POM.
 #### Tests Included:
 - Valid user login
 - Product visibility
@@ -79,8 +84,21 @@ Automated login and inventory page validations on https://saucedemo.com using Pl
 - Integrated `pytest-html` for automatic HTML reports
 - Configured `conftest.py` to capture screenshots on test failures
 - Added one flaky test to demonstrate failure reporting
-- (Optional) Configured Playwright screenshots on failure
+- Configured Playwright screenshots on failure
 - Added `pytest.ini` and cleaned up repo structure
+
+### Week 4: Final Project - SauceDemo Test Suite
+Built a comprehensive end-to-end test suite on https://saucedemo.com using Playwright, covering realistic e-commerce behaviors. Emphasized code clarity, maintainability, and meaningful automation use cases.
+#### Tests Included:
+- `test_successful_login`: Verifies valid login credentials and correct redirect behavior
+- `test_add_and_remove_from_cart`: Adds and removes an item from the cart and validates item count
+- `test_sort_by_price_low_to_high`: Selects "Price (low to high)" from sort dropdown and validates sort behavior
+- `test_dynamic_render`: Confirms cart badge dynamically updates after adding item (JS-rendered behavior)
+#### Features:
+- Page Object Model across all flows (Login, Inventory, Cart)
+- Clear test suite organization under `test_final_project/`
+- Failure screenshots and HTML report generation (`report.html`)
+- Parametrized and dynamic element handling where appropriate
 
 ## Contact
 Created by [Mahmoud Jabir](https://github.com/maxxjabr)

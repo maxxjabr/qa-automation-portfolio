@@ -2,7 +2,9 @@ venv/
 __pycache__/
 *.pyc
 .env
+.python-version
 .pytest_cache
+.pytest_cache/
 report.html
 test_shopping_site/screenshots/*
 test_shopping_site/screenshots/.gitkeep
