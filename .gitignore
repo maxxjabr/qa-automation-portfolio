@@ -8,3 +8,5 @@ __pycache__/
 report.html
 test_shopping_site/screenshots/*
 test_shopping_site/screenshots/.gitkeep
+# macOS
+.DS_Store
