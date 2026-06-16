@@ -98,7 +98,6 @@ Built a comprehensive end-to-end test suite on https://saucedemo.com using Playw
 - Page Object Model across all flows (Login, Inventory, Cart)
 - Clear test suite organization under `test_final_project/`
 - Failure screenshots and HTML report generation (`report.html`)
-- Parametrized and dynamic element handling where appropriate
 
 ## Contact
 Created by [Mahmoud Jabir](https://github.com/maxxjabr)
