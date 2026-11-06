@@ -16,8 +16,6 @@ def test_add_and_remove_from_cart(page):
     inventory.add_first_item_to_cart()
     inventory.open_cart()
 
-    from playwright.sync_api import expect
-
     expect(page.locator(".cart_item")).to_have_count(1)
 
     page.go_back()
