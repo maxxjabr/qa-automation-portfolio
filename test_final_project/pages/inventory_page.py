@@ -11,7 +11,14 @@ class InventoryPage:
         return self.page.query_selector_all('.inventory_item_name')
 
     def add_first_item_to_cart(self):
-        self.page.locator(".inventory_item button").first.click()
+        item = self.page.locator(".inventory_item").first
+
+        item.locator('button:has-text("Add to cart")').click()
+
+        # Wait until the application confirms the item was added.
+        item.locator('button:has-text("Remove")').wait_for(
+            state="visible"
+        )
     
     def remove_first_item_from_cart(self):
         self.page.locator('button:has-text("Remove")').first.click()
